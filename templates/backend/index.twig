@@ -1,0 +1,78 @@
+{% extends "layout.twig" %}
+
+
+{% block content %}
+
+
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+        <div class="col">
+            <div class="card radius-10 overflow-hidden bg-success">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-3 text-white">Статьи</p>
+                            <h5 class="mb-0 text-white">всего статей - {{ articles_count }}</h5>
+                        </div>
+                        <div class="ms-auto text-white">	<i class='bx bx-book font-60'></i>
+                        </div>
+
+                    </div>
+                    <div class="mt-5 mb-3">
+                        <a href="/admin/article-add" class="btn text-white">
+                            <i class="lni lni-circle-plus"></i>
+                            Добавить статью
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card radius-10 overflow-hidden bg-primary">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-3 text-white">Категории</p>
+                            <h5 class="mb-0 text-white">всего категорий - {{ categories_count }}</h5>
+                        </div>
+                        <div class="ms-auto text-white">	<i class='bx bx-menu font-60'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 mb-3">
+                    <a href="/admin/tag-add" class="btn text-white">
+                        <i class="lni lni-circle-plus"></i>
+                        Добавить тэг
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card radius-10 overflow-hidden bg-warning">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-3 text-dark">Тэги</p>
+                            <h5 class="mb-0 text-dark">всего тэгов - {{ tags_count }}</h5>
+                        </div>
+                        <div class="ms-auto text-dark">	<i class='bx bx-purchase-tag font-60'></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 mb-3">
+                        <a href="/admin/tag-add" class="btn text-dark">
+                            <i class="lni lni-circle-plus"></i>
+                            Добавить тэг
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!--end row-->
+
+
+
+
+
+{% endblock %}
